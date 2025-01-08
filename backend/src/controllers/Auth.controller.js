@@ -11,12 +11,14 @@ const UploadOnCloudinary = require("../utils/Cloudinary.js");
 const accessTokenOptions = {
     path: "/",
     httpOnly: true,
-    sameSite: "lax",
-    expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)
+    sameSite: 'strict',
+    // expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)
+    maxAge: 5 * 24 * 60 * 60 * 1000
 }
 const refreshTokenOptions = {
     ...accessTokenOptions,
-    expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+    // expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+    maxAge: 7 * 5 * 24 * 60 * 60 * 1000
 } 
 // sign up route 
 const SignUp = AsyncHandler(async (req, res) => {
