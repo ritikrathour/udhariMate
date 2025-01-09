@@ -11,6 +11,7 @@ const UploadOnCloudinary = require("../utils/Cloudinary.js");
 const accessTokenOptions = {
     httpOnly: true,
     sameSite: 'none',
+    secure:true,
     expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)
 }
 const refreshTokenOptions = {
@@ -131,14 +132,14 @@ const SignOut = AsyncHandler(async (req, res) => {
         new: true
     })
     res.status(200).clearCookie("accessToken", {
-        path: "/",
         httpOnly: true,
-        sameSite: "lax",
+        sameSite: 'none',
+        secure:true, 
         expires: new Date(Date.now())
     }).clearCookie("refreshToken", {
-        path: "/",
-        httpOnly: true,
-        sameSite: "lax",
+         httpOnly: true,
+        sameSite: 'none',
+        secure:true, 
         expires: new Date(Date.now())
     }).json(new ApiResponse(200, {}, "User Logged out Successfully!"));
 })
