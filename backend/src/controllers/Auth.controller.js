@@ -16,7 +16,7 @@ const accessTokenOptions = {
 }
 const refreshTokenOptions = {
     ...accessTokenOptions,
-    expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000
+    expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
 } 
 // sign up route 
 const SignUp = AsyncHandler(async (req, res) => {
