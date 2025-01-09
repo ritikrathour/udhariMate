@@ -8,8 +8,8 @@
     padding: 0;
     box-sizing: border-box;  
     font-family: "Poppins", serif;
-  font-weight: 200;
-  font-style: normal;
+    font-weight: 300;
+    font-style: normal;
 }
 input{
     border: none;
