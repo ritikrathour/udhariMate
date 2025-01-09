@@ -5,6 +5,8 @@ const Auth = require("../models/auth.model.js")
 const jwt = require("jsonwebtoken");
 const VerifyUser = AsyncHandler(async (req, _, next) => {
     const AccessToken = req?.cookies?.accessToken; 
+ console.log(AccessToken);
+    console.log(req.cookies);
     if (!AccessToken) {
         throw new ApiError(401, "Unauthorized User!");
     }
