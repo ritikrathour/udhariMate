@@ -60,7 +60,7 @@ const NavBar = () => {
                                         </div>
                                     </button>
                                 </div>
-                                <div className={`${show ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}  absolute bg-white border w-[200px] z-40  flex flex-col items-start top-16 shadow rounded-md right-5 transition-all`}>
+                                <div className={`${show ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}  absolute bg-white border w-[220px] z-40  flex flex-col items-start top-16 shadow rounded-md right-5 transition-all`}>
                                     <div className="bg-gray-100 w-full p-2 text-center">
                                         <Link to={`/profile/${user?._id}`} className="py-1 flex justify-start items-center gap-2">
                                             <div className="image w-[35px] h-[35px] md:w-[45px] md:h-[45px] rounded-full overflow-hidden">
