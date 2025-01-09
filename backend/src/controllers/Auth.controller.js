@@ -9,9 +9,9 @@ const { mongoose } = require("mongoose");
 const Borrower = require("../models/borrower.model.js");
 const UploadOnCloudinary = require("../utils/Cloudinary.js");
 const accessTokenOptions = {
-    path: "/",
     httpOnly: true,
-    sameSite: 'strict',
+    sameSite: 'none',
+    secure:true,
     expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)
 }
 const refreshTokenOptions = {
