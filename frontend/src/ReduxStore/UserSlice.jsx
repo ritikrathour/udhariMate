@@ -8,7 +8,7 @@ const initialState = {
 }
 const reFreshAccessToken = async () => {
     try {
-        await AxiosInstance.post("/refresh-access-token", {});
+        await AxiosInstance.post("/user/refresh-access-token", {});
     } catch (error) {
         console.log(error);
     }
