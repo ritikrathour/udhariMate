@@ -68,7 +68,7 @@ const NavBar = () => {
                                             </div>
                                             <div className="flex flex-col items-start leading-4">
                                                 <h3 className="capitalize font-medium text-[14px] md:text-[16px]">{user?.userName}</h3>
-                                                <p className="text-sm text-gray-400 text-[10px]">{user?.email}</p>
+                                                <p className="text-sm text-gray-400 text-[10px]">{user?.email?.slice(0, 12)}...</p>
                                             </div>
                                         </Link>
                                     </div>
