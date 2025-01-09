@@ -11,7 +11,6 @@ const UploadOnCloudinary = require("../utils/Cloudinary.js");
 const accessTokenOptions = {
     httpOnly: true,
     sameSite: 'none',
-    secure:true,
     expires: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)
 }
 const refreshTokenOptions = {
