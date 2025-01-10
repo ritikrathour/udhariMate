@@ -46,7 +46,7 @@ const Profile = () => {
         const formData = new FormData();
         formData.append("image", imageFile);
         try {
-            await AxiosInstance.patch("/user/uploadImage",formData); 
+            await AxiosInstance.put("/user/uploadImage",formData); 
             toast.success("Image Uploaded Successfully!")
             setUploadImageLoading(false)
         } catch (err) {
