@@ -111,11 +111,10 @@ const NavBar = () => {
                     }
 
                 </div>
-
-                <div onClick={() => dispatch(stopScrolling(show))} className={`w-full absolute left-0 top-0 h-screen z-50 flex justify-center pb-20 md:items-center items-end p-4 sm:p-6 bg-[#9ca3af69] ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-0"} transition-all`}>
-                    <SignOutPopUp />
-                </div>
             </nav >
+             <div onClick={() => dispatch(stopScrolling(show))} className={`w-full fixed inset-0 h-screen z-50 flex justify-center pb-20 md:items-center items-end p-4 sm:p-6 bg-[#9ca3af69] ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-0"} transition-all`}>
+                    <SignOutPopUp />
+             </div>
 
         </>
 
