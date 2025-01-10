@@ -30,7 +30,7 @@ const SignOutPopUp = () => {
             <div onClick={(e) => e.stopPropagation()} className="md:w-[40%] md:h-[40%] w-full h-[220px] rounded-xl bg-white drop-shadow-md relative flex justify-between p-5 flex-col gap-4">
                 <div className="absolute top-6 left-2 w-[35px] h-[35px] rounded-full cursor-pointer bg-[#69d2ff3d] text-center"><i className="fas fa-warning leading-[35px] text-[#469bbf]"></i></div>
                 <div className="mt-10">
-                    <h2 className="font-medium text-lg text-red-950">Sign Out From Udhari App</h2>
+                    <h2 className="font-medium text-lg text-red-950">Sign Out From UdhariMate Web App</h2>
                     <p className="text-sm">Are you sure you whould like to sign out of your Udhari account?</p>
                 </div>
                 <div className="flex items-center gap-2 justify-between ">
