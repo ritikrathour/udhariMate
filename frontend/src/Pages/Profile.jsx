@@ -85,7 +85,7 @@ const Profile = () => {
     };
     return (
         <>
-            <section className="flex items-center justify-center gap-5 flex-col h-[100vh] py-2">
+            <section className="flex items-center justify-center flex-col h-[100vh]">
                 <label htmlFor="userImage" className="w-[200px] h-[200px] overflow-hidden cursor-pointer rounded-full drop-shadow-md border border-gray-300 backdrop-blur">
                     <LazyImage src={preview || user?.profilePhoto ||  "../images/user.png"} alt="home_second_image" accept="image/*" />
                 </label>
