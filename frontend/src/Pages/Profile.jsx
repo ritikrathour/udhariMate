@@ -41,8 +41,7 @@ const Profile = () => {
         }
         handleImageUpload(imageFile)
     } 
-    const handleImageUpload = async (imageFile) => {
-        console.log(imageFile);
+    const handleImageUpload = async (imageFile) => { 
         setUploadImageLoading(true)
         const formData = new FormData();
         formData.append("image", imageFile);
