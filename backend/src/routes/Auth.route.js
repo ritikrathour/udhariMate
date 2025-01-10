@@ -11,7 +11,7 @@ AuthRoute.route("/user").get(VerifyUser, GetCurrUser);
 AuthRoute.route("/user/change-password").post(VerifyUser, ChangePassowrd); 
 AuthRoute.route("/user/update-profile").post(VerifyUser, UpdateProfile); 
 AuthRoute.route("/user/refresh-access-token").post(RefreshAccessToken); 
-AuthRoute.route("/user/uploadImage").patch(VerifyUser,upload.single("image"),UploadeUserImage);  
+AuthRoute.route("/user/uploadImage").put(VerifyUser,upload.single("image"),UploadeUserImage);  
 
 module.exports = AuthRoute;
 
