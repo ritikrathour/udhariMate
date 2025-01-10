@@ -10,6 +10,7 @@ import { useRef } from "react";
 import NoContent from "../components/NoContent";
 import ScrollToTop from "../components/ScrollTop";
 import AxiosInstance from "../utils/AxiosInstance";
+import LazyImage from "../utils/LazyImage";
 const TransactionArea = () => {
     const [showBill, setShowBill] = useState(false);
     const [isPayment, setIsPayment] = useState(false);
@@ -61,8 +62,8 @@ const TransactionArea = () => {
                 }
                 <nav className="flex justify-between items-center p-2 bg-white rounded-md" >
                     <div className="flex items-center gap-2">
-                        <div className="rounded-full overflow-hidden w-[40px] h-[40px]">
-                            <img className="object-cover h-full" src={"../images/js.jfif" || "default_user_image"} alt="" />
+                        <div className="rounded-full overflow-hidden w-[40px] h-[40px]"> 
+                            <LazyImage src={ borrower?.borrower?.profilePhoto ||  "../images/user.png"} alt="borrowerAvtar" />
                         </div>
                         <div className="flex flex-col">
                             <h3 className="capitalize font-semibold text-[14px]">{borrower?.borrower?.userName}</h3>
