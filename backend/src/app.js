@@ -26,9 +26,5 @@ app.use(cookieParser())
 // routes
 app.use("/api/v1",AuthRoute); 
 app.use('/api/v1',TransactionRoute);
-app.use('/api/v1',BorrowerRouter);
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Internal Server Error', details: err.message });
-});
+app.use('/api/v1',BorrowerRouter); 
 module.exports  = app;
