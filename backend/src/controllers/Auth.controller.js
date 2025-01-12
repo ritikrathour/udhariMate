@@ -185,7 +185,7 @@ const UploadeUserImage = AsyncHandler(async (req, res) => {
     if (!user) {
         throw new ApiError("Access denied!")
     }
-    const uploadedImagePath = await UploadOnCloudinary(req.file);
+    const uploadedImagePath = await UploadOnCloudinary(req.file.buffer);
     if (!uploadedImagePath) {
         throw new ApiError(400, "Can't Uploaded image!")
     }
